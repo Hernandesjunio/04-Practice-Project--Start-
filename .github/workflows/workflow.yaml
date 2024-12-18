@@ -12,6 +12,10 @@ jobs:
           node-version: 18
       - name: Node Install Dependencies
         run: npm ci
+      - name: Install EsLint
+        run: npm install eslint --save-dev
+      - name: Install vitest
+        run: npm install vitest --save-dev
       - name: Lint
         run: eslint --ext .jsx --fix src"
       - name: Test
