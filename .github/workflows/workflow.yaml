@@ -4,9 +4,17 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Project
+        uses: action/checkout@v3
+      - name: Install Node
+        uses: actions/setup-node@v3
+          with:
+            node-version: 18
+      - name: Node Install Dependencies
+        run: npm ci
       - name: Lint
-        run: echo "Lint"
+        run: eslint --ext .jsx --fix src"
       - name: Test
-        run: echo "Test"
+        run: vitest run
       - name: Deploy
-        run: echo "Deploy"
+        run: vite build
