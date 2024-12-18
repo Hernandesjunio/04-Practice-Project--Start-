@@ -17,7 +17,7 @@ jobs:
       - name: Install vitest
         run: npm install vitest --save-dev
       - name: Lint
-        run: eslint --ext .jsx --fix src"
+        run: eslint --ext .jsx --fix src
       - name: Test
         run: vitest run
       - name: Deploy
