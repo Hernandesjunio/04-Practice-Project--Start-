@@ -1,0 +1,13 @@
+name: My First Workflow
+on: push
+jobs:
+  run-on: ubuntu-latest
+  jobs:
+    my-job:
+     steps:
+        - name: Lint
+          run: echo "Lint"
+        - name: Test
+          run: echo "Test"
+        - name: Deploy
+          run: echo "Deploy"
