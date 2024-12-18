@@ -17,8 +17,8 @@ jobs:
       - name: Install vitest
         run: npm install vitest --save-dev
       - name: Lint
-        run: eslint --ext .jsx --fix src
+        run: npm run lint
       - name: Test
-        run: vitest run
+        run: npm run test
       - name: Deploy
-        run: vite build
+        run: npm run build
