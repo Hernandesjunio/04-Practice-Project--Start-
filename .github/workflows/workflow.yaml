@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Project
-        uses: action/checkout@v3
+        uses: actions/checkout@v3
       - name: Install Node
         uses: actions/setup-node@v3
-          with:
-            node-version: 18
+        with:
+          node-version: 18
       - name: Node Install Dependencies
         run: npm ci
       - name: Lint
