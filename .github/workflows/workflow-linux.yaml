@@ -9,8 +9,9 @@ jobs:
         name: First Step
         run: |
           echo First Step
-          json_data = "{\"values\":\"Teste Valor\"}"
-          (echo "json_data=$json_data") >> "GITHUB_OUTPUT"
+          json_data="{\"values\":\"Teste Valor\"}"
+          echo json_data is $json_data
+          (echo "json_data=$json_data") >> "$GITHUB_OUTPUT"
       - id: second-step
         name: Second Step
         run: |
