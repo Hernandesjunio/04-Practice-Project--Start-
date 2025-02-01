@@ -1,6 +1,6 @@
 name: My Linux Workflow
 on:
- workflow_call:
+  workflow_dispatch: 
 jobs:
   my-first-job:
     runs-on: ubuntu-latest
@@ -9,7 +9,8 @@ jobs:
         name: First Step
         run: |
           echo First Step
-          echo json_data="{\"values\":\"Teste Valor\""}" >> "GITHUB_OUTPUT"
+          json_data = "{\"values\":\"Teste Valor\"}"
+          echo (json_data=$json_data) >> "GITHUB_OUTPUT"
       - id: second-step
         name: Second Step
         run: |
