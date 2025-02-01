@@ -20,7 +20,7 @@ jobs:
           echo ${{ steps.first-step.outputs.json_data }}
           json_body='${{ steps.first-step.outputs.json_data }}'
           echo enviando json para a API
-          curl -X POST "https://api.webhookinbox.com/i/y5ct5Ud1/in/"
-            -H  "Content-Type: application/json"
-            -d "$json_body"
+          curl -X POST "https://api.webhookinbox.com/i/y5ct5Ud1/in/"\
+               -H  "Content-Type: application/json"\
+               -d "$json_body"
           
